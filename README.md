@@ -1,14 +1,28 @@
-# Streaming-Data-with-Azure-Event-Hubs
-This project demonstrates an end-to-end solution for real-time data streaming and analysis using Azure Databricks and Azure Event Hubs, with visualization in Power BI. It's an in-depth guide covering the setup, configuration, and implementation of a streaming data pipeline following the medallion architecture.
+# Streaming Data with Azure Event Hubs
 
-# Prerquisites
+This project demonstrates an end-to-end solution for **real-time data streaming and analytics** using **Azure Event Hubs**, **Azure Databricks**, **Unity Catalog**, and **Power BI**.
 
-● Active Azure subscription with access to Azure Databricks and Event Hubs.
+The main goal of this project is to build a streaming data pipeline capable of ingesting events in real time, processing them with Apache Spark Structured Streaming, organizing the data using the **Medallion Architecture**, and making the curated data available for analytical consumption and visualization.
 
-● Databricks Workspace with Unity Catalog Enabled.
+---
 
-● Azure Event Hubs Service.
+## 📌 Project Overview
 
-● Power BI Desktop (Windows).
+Modern data platforms often need to process data continuously instead of relying only on batch pipelines. This project simulates a real-time streaming scenario where event data is ingested through **Azure Event Hubs**, processed in **Azure Databricks**, and prepared for visualization in **Power BI**.
 
-● Familiarity with Python, Spark, SQL, and basic data engineering concepts.
+The pipeline follows the **Bronze, Silver, and Gold** layer approach:
+
+```text
+Event Producer
+      ↓
+Azure Event Hubs
+      ↓
+Azure Databricks Structured Streaming
+      ↓
+Bronze Layer
+      ↓
+Silver Layer
+      ↓
+Gold Layer
+      ↓
+Power BI
